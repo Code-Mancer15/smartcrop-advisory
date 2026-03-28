@@ -27,7 +27,7 @@ mvn exec:java
 mvn spring-boot:run
 ```
 
-Open: http://localhost:8080
+Open: http://localhost:10000
 
 ## 📌 Future Improvements
 
