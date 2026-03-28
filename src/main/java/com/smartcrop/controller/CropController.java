@@ -37,7 +37,7 @@ public String predict(@ModelAttribute CropInput input,
                       HttpSession session) {
 
     if (session.getAttribute("user") == null) {
-        return "redirect:/signup"; // 🔒 block access
+        return "redirect:/signup";
     }
 
     String crop = predictionService.predict(input);
