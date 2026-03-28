@@ -1,0 +1,11 @@
+target/
+*.class
+*.log
+*.dat
+*.db
+
+node_modules/
+.idea/
+.vscode/
+
+application.properties

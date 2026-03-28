@@ -1,0 +1,58 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ------------------< com.smartcrop:smartcrop-advisory >------------------
+[INFO] Building smartcrop-advisory 1.0.0
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- exec:3.1.0:java (default-cli) @ smartcrop-advisory ---
+Loaded: 2200 rows, 22 crops
+Accuracy: 99.50%
+Model saved as model.dat
+Now run: mvn spring-boot:run
+[INFO] 
+[INFO] >>> spring-boot:3.2.0:run (default-cli) > test-compile @ smartcrop-advisory >>>
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ smartcrop-advisory ---
+[INFO] Copying 0 resource from src\main\resources to target\classes
+[INFO] Copying 1 resource from src\main\resources to target\classes
+[INFO] 
+[INFO] --- compiler:3.11.0:compile (default-compile) @ smartcrop-advisory ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ smartcrop-advisory ---
+[INFO] skip non existing resourceDirectory C:\Users\vyom2\OneDrive\Documents\PROJECT\CROP\src\test\resources
+[INFO] 
+[INFO] --- compiler:3.11.0:testCompile (default-testCompile) @ smartcrop-advisory ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] <<< spring-boot:3.2.0:run (default-cli) < test-compile @ smartcrop-advisory <<<
+[INFO] 
+[INFO] 
+[INFO] --- spring-boot:3.2.0:run (default-cli) @ smartcrop-advisory ---
+[INFO] Attaching agents: []
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v3.2.0)
+
+2026-03-28T15:13:04.067+05:30  INFO 9132 --- [           main] com.smartcrop.SmartCropApplication       : Starting SmartCropApplication using Java 24.0.1 with PID 9132 (C:\Users\vyom2\OneDrive\Documents\PROJECT\CROP\target\classes started by vyom2 in C:\Users\vyom2\OneDrive\Documents\PROJECT\CROP)
+2026-03-28T15:13:04.072+05:30  INFO 9132 --- [           main] com.smartcrop.SmartCropApplication       : No active profile set, falling back to 1 default profile: "default"
+WARNING: A restricted method in java.lang.System has been called
+WARNING: java.lang.System::load has been called by org.apache.tomcat.jni.Library in an unnamed module (file:/C:/Users/vyom2/.m2/repository/org/apache/tomcat/embed/tomcat-embed-core/10.1.16/tomcat-embed-core-10.1.16.jar)
+WARNING: Use --enable-native-access=ALL-UNNAMED to avoid a warning for callers in this module
+WARNING: Restricted methods will be blocked in a future release unless native access is enabled
+
+2026-03-28T15:13:05.946+05:30  INFO 9132 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2026-03-28T15:13:05.960+05:30  INFO 9132 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-03-28T15:13:05.960+05:30  INFO 9132 --- [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.16]
+2026-03-28T15:13:06.071+05:30  INFO 9132 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-03-28T15:13:06.071+05:30  INFO 9132 --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1873 ms
+Model loaded from: C:\Users\vyom2\OneDrive\Documents\PROJECT\CROP\model.dat
+2026-03-28T15:13:06.396+05:30  INFO 9132 --- [           main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2026-03-28T15:13:06.751+05:30  INFO 9132 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
+2026-03-28T15:13:06.756+05:30  INFO 9132 --- [           main] com.smartcrop.SmartCropApplication       : Started SmartCropApplication in 3.504 seconds (process running for 4.218)
