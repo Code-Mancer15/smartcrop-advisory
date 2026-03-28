@@ -6,8 +6,8 @@ public class FertilizerAdvice {
     private String nutrientName;
     private double userValue;
     private double requiredValue;
-    private String status;   // "ok" | "low" | "high"
-    private String label;    // "Adequate" | "Deficient" | "Excess"
+    private String status;   // ok,low,high
+    private String label;    // Adequate,Deficient,Excess
     private String emoji;
     private String message;
 

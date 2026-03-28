@@ -3,7 +3,7 @@ package com.smartcrop.model;
 import jakarta.persistence.*;
 
 @Entity
-@Table(name = "users")   // optional but recommended
+@Table(name = "users") 
 public class User {
 
     @Id

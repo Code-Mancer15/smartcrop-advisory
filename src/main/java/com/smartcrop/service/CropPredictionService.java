@@ -47,7 +47,6 @@ public class CropPredictionService {
             instance.setValue(datasetStructure.attribute("ph"),          input.getPh());
             instance.setValue(datasetStructure.attribute("rainfall"),    input.getRainfall());
 
-            // classifyInstance returns a numeric index; convert it back to the crop name
             double classIndex = model.classifyInstance(instance);
             String crop = datasetStructure.classAttribute().value((int) classIndex);
             return crop.substring(0, 1).toUpperCase() + crop.substring(1);

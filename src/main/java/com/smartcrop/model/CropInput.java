@@ -1,6 +1,6 @@
 package com.smartcrop.model;
 
-// Holds the 7 values submitted by the user via the web form
+
 public class CropInput {
 
     private double nitrogen;

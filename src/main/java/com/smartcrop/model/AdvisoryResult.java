@@ -2,7 +2,7 @@ package com.smartcrop.model;
 
 import java.util.List;
 
-// Bundles everything the controller needs to pass to the HTML template
+
 public class AdvisoryResult {
 
     private String cropName;
