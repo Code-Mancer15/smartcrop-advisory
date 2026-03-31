@@ -23,7 +23,7 @@ public class CropController {
 public String showHome(HttpSession session, Model model) {
 
     if (session.getAttribute("user") == null) {
-        return "redirect:/signup"; // 🔒 block access
+        return "redirect:/signup"; 
     }
 
     model.addAttribute("cropInput", new CropInput());
