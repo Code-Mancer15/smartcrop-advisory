@@ -27,6 +27,11 @@ public class AuthController {
         return "redirect:/";
     }
 
+    @GetMapping("/login")
+        public String loginPage() {
+        return "login"; // renders templates/login.html
+    }
+
     @GetMapping("/logout")
     public String logout(HttpSession session) {
         session.invalidate();
