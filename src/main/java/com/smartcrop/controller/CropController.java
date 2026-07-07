@@ -20,44 +20,44 @@ public class CropController {
     // Show the input form with default values pre-filled
 
     @GetMapping("/")
-public String showHome(HttpSession session, Model model) {
+    public String showHome(HttpSession session, Model model) {
 
-    if (session.getAttribute("user") == null) {
-        return "redirect:/signup"; 
+        if (session.getAttribute("user") == null) {
+            return "redirect:/login"; 
+        }
+
+        model.addAttribute("cropInput", new CropInput());
+        return "index";
     }
 
-    model.addAttribute("cropInput", new CropInput());
-    return "index";
-}
 
+    @PostMapping("/predict")
+    public String predict(@ModelAttribute CropInput input,
+                          Model model,
+                          HttpSession session) {
 
-        @PostMapping("/predict")
-public String predict(@ModelAttribute CropInput input,
-                      Model model,
-                      HttpSession session) {
+        if (session.getAttribute("user") == null) {
+            return "redirect:/login";
+        }
 
-    if (session.getAttribute("user") == null) {
-        return "redirect:/signup";
+        String crop = predictionService.predict(input);
+
+        model.addAttribute("result",
+                new AdvisoryResult(
+                        crop,
+                        advisorService.getFertilizerAdvice(crop,
+                                input.getNitrogen(),
+                                input.getPhosphorus(),
+                                input.getPotassium()),
+                        advisorService.getWeatherAdvice(
+                                input.getTemperature(),
+                                input.getHumidity(),
+                                input.getRainfall()),
+                        input
+                )
+        );
+
+        return "index";
     }
-
-    String crop = predictionService.predict(input);
-
-    model.addAttribute("result",
-            new AdvisoryResult(
-                    crop,
-                    advisorService.getFertilizerAdvice(crop,
-                            input.getNitrogen(),
-                            input.getPhosphorus(),
-                            input.getPotassium()),
-                    advisorService.getWeatherAdvice(
-                            input.getTemperature(),
-                            input.getHumidity(),
-                            input.getRainfall()),
-                    input
-            )
-    );
-
-    return "index";
-}
 
 }
